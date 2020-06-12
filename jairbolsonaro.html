@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<style>
+		  /* Style all font awesome icons * https://twitter.com/jairbolsonaro/status//
+			.fa {
+				  padding: 20px;
+				  font-size: 30px;
+				  width: 50px;
+				  text-align: center;
+				  text-decoration: none;
+				  border-radius: 50%;
+				}
+				/* Add a hover effect if you want */
+				.fa:hover {
+				  opacity: 0.7;
+				}
+
+				/* Set a specific color for each brand */
+
+				/* Facebook */
+				.fa-facebook {
+				  background: #3B5998;
+				  color: white;
+				}
+
+				/* Twitter */
+				.fa-twitter {
+				  background: #55ACEE;
+				  color: white;
+				}
+				.fa-youtube {
+				  background: #bb0000;
+				  color: white;
+				}
+
+				.fa-instagram {
+				  background: #125688;
+				  color: white;
+				}
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Analise dos Twittes de BOLSONARO</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="js/c3.js"></script>
+	<link href="css/c3.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-6">
+          <h1>Jair Bolsonaro</h1>
+        </div>
+        <div class="col-6">
+          <p class="text-right"><a href="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/biografia-do-presidente">Biografia site: www.gov.br</a></p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <div class="media"> <img src="https://pbs.twimg.com/profile_images/1057631480459886595/9VPdGJJz_400x400.jpg" width="100" height="50" alt="@jairbolsonaro" class="rounded-circle img-fluid">
+            <div class="media-body">
+              <h5 class="mt-0">Jair Messias Bolsonaro</h5>
+              <p> Capitão do Exército Brasileiro, eleito 38° Presidente da República Federativa do Brasil. Flag of Brazil </p>
+              <p>Source:Twitter&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="row justify-content-md-around m-1">
+            <p class="text-right"><a href="https://sistema.planalto.gov.br/falepr2/index.php">Fale com o Presidente</a></p>
+            <div class="row justify-content-md-around m-1">
+              <p>
+                <!-- Add font awesome icons -->
+                <a href="https://www.facebook.com/jairmessias.bolsonaro" class="fa fa-facebook"></a> <a href="https://twitter.com/jairbolsonaro" class="fa fa-twitter"></a> <a href="https://www.instagram.com/jairmessiasbolsonaro/" class="fa fa-instagram"></a> <a href="https://www.youtube.com/user/jbolsonaro" class="fa fa-youtube"></a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="row">
+          <div class="col-lg-12">
+            <p></p>
+            <h2>Metodologia:</h2>
+            <p></p>
+            <ul>
+              <li>&nbsp;O trabalho foi dividido em duas partes:</li>
+            </ul>
+            <ol>
+              <li> Primeiro um&nbsp; analise com relacao a frequencia das palavras utilizadas criando assim um grafico e uma Word Cloud. Todas as palavras foram passadas para minusculo e depois foi feita a analise.&nbsp; &nbsp;&nbsp;</li>
+              <li>Segundo, utilizando a Natural Language API ( Analyzing Sentimental) da plataforma da Google Cloud e&nbsp; Text Analytics API da Cognitive Services na plataforma da Azure para apresentar um overall das emoces contidas nos twittes.&nbsp; &nbsp; &nbsp;</li>
+            </ol>
+          </div>
+          <div class="col-lg-4">
+            <p></p>
+            <h4>Frequencia:</h4>
+            <p></p>
+            <p>Quantidade de termos utilizados</p>
+            <p>Horas em que os twittes foram enviados</p>
+            <p>&nbsp;</p>
+          </div>
+          <div class="col-lg-4">
+            <p></p>
+            <h4>Goolge Cloud:</h4>
+            <p></p>
+            <p><a href="https://cloud.google.com/natural-language/docs/sentiment-tutorial" target="new">Sentiment Analysis Tutorial </a></p>
+            <p><a href="https://cloud.google.com/natural-language/docs/basics#interpreting_sentiment_analysis_values" target="new">Interpreting sentiment analysis values </a></p>
+            <p>&nbsp;</p>
+          </div>
+		  <div class="col-lg-4">
+            <p></p>
+            <h4>Azure</h4>
+            <p></p>
+            <p><a href="https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview" target="new">Text Analytics API</a></p>
+            <p>&nbsp;</p>
+          </div>
+          <hr>
+          <div class="col-lg-12">
+            <p></p>
+            <h2>Dados:</h2>
+            <p></p>
+            <p>A analise foi feito coletando dos twittes do Presidente Jair Bolsonaro diretamente do Twitter.</p>
+            <p>O periodo utilizado foi de 2010-04-01 ate 2020-06-08.</p>
+            <p>Um total de 8014 twittes foram analisados. Sendo&nbsp;91 twittes descartados  por estar sem texto e 386 twittes descartados por apresentarem apenas links ou hashtags.</p>
+            <p>Sendo assim, foram levados en consideracao para analise nas duas plataformas um total de 7537 twittes</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>
+            <p>Frequencia das palavras utilizadas</p>
+          </h3>
+			<img src="images/freq_words.png" class="img-fluid" alt="Placeholder image" ></img>
+		  
+		  
+	<table width="200" border="1" align="center" bordercolordark="#131212" >
+  <tbody>
+    <tr>
+      <td>Frequencia</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>brasil</td>
+      <td>1447</td>
+    </tr>
+    <tr>
+      <td>bolsonaro</td>
+      <td>836</td>
+    </tr>
+    <tr>
+      <td>todos</td>
+      <td>677</td>
+    </tr>
+    <tr>
+      <td>governo</td>
+      <td>529</td>
+    </tr>
+    <tr>
+      <td>sobre</td>
+      <td>422</td>
+    </tr>
+    <tr>
+      <td>obrigado</td>
+      <td>364</td>
+    </tr>
+    <tr>
+      <td>abraço</td>
+      <td>336</td>
+    </tr>
+    <tr>
+      <td>grande</td>
+      <td>313</td>
+    </tr>
+    <tr>
+      <td>jair</td>
+      <td>292</td>
+    </tr>
+
+  </tbody>
+</table>
+		 <hr>
+		<div class="col-lg-12">
+      <h3><p>Word Cloud</p>
+        <img src="images/wordcloud.png" class="rounded img-fluid" alt="Placeholder image">      </h3>
+   
+        </div>
+      </div>
+        <div class="col-lg-12">
+          <h3>
+            <p>Frequencia das horas que os twittes foram enviados</p>
+          </h3>
+		  <img src="images/hours_tw.png" class="rounded img-fluid" alt="Placeholder image">
+<hr>
+          <div class="col-lg-12">
+            <h3>
+              <p>Word Cloud</p>
+              <img src="images/wordcloud.png" class="rounded img-fluid" alt="Placeholder image"></h3>
+          </div>
+        </div>
+		<hr>
+      <div class="row">
+        <div class="col-lg-12">
+			<h4><p>Positvos, Neutros e Negativos de todos os Twittes</p>
+			</h4>
+		  	<div id="chart1"></div>
+		</div>
+	
+		  <div class="col-lg-12">
+			<h3><p>Positvos, Neutros e Negativos de 2020 Twittes</p>
+			</h3>
+		  <div id="chart2"></div>
+	    </div>	  
+		<div class="col-lg-12">
+			<h5><p>Grafico com todos os Tweets e sua avaliacao entre Positivo (+1), Neutro(0) e Negativo (-1) em 2020</p></h5>
+			  <div id="chart"></div>
+		</div>
+      </div>
+<footer class="text-center">
+    <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>Copyright © MyWebsite. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+	<script>
+      var chart = c3.generate({
+		bindto: '#chart',
+		data: {
+          url: 'data/bolsonaro_2020_overall.csv'
+        },
+        zoom: {
+          enabled: true,
+		  extent: [1, 100]
+        },
+		axis: {
+        	y: {
+            max: 1.2,
+            min: -1.2,
+            // Range includes padding, set 0 if no padding needed
+            // padding: {top:0, bottom:0}
+        }},
+		subchart: {
+          show: true,
+		  size:{ height: 50}
+        }});
+	  
+		var chart1  = c3.generate({
+			bindto: '#chart1',
+			data: {
+        	columns: [
+			['Positivo', 8.09 ],
+			['Neutro',72.48 ],
+			['Negativo', 19.42 ],
+        ],
+        type: 'gauge',
+		colors: {
+            Positivo: '#0000ff',
+            Neutro: '#00ff00',
+            Negativo: '#ff0000'
+        },
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    },
+    size: {
+        height: 180
+    }
+});
+	var chart2 = c3.generate({
+    	bindto: '#chart2',
+		data: {
+        columns: [
+            ['Positivo', 3.9 ],
+			['Neutro',79.00 ],
+			['Negativo', 17.00 ],
+        ],
+        type: 'gauge',
+		colors: {
+            Positivo: '#0000ff',
+            Neutro: '#00ff00',
+            Negativo: '#ff0000'
+        },
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    },
+    size: {
+        height: 180
+    }
+});
+    </script>
+  </body>
+</html>

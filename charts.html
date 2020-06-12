@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/c3.css">
+  </head>
+  <body>
+	<div id="chart"></div>
+	<div id="chart1"></div>  
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="js/c3.js"></script>
+	  
+    <script>
+      var chart = c3.generate({
+		bindto: '#chart',
+		data: {
+          url: 'data/tweets_overall.csv'
+        },
+		subchart: {
+          show: true,
+		  size:{ height: 50}
+        },
+        zoom: {
+          enabled: true,
+		  extent: [1, 100]
+        },
+		axis: {
+        y: {
+            max: 1.2,
+            min: -1.2,
+            // Range includes padding, set 0 if no padding needed
+            // padding: {top:0, bottom:0}
+        },
+      }
+	  });
+	  var chart1 = c3.generate({
+    	bindto: '#chart1',
+		data: {
+        columns: [
+            ['Positivo', 8.09 ],
+			['Neutro',72.48 ],
+			['Negativo', 19.42 ],
+        ],
+        type: 'gauge',
+		colors: {
+            Positivo: '#0000ff',
+            Neutro: '#00ff00',
+            Negativo: '#ff0000'
+        },
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    },
+    size: {
+        height: 180
+    }
+});
+    </script>
+  </body>
+</html>
